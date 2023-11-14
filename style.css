@@ -1,0 +1,101 @@
+:root {
+  --bg-image: url(assets/background.svg);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  background-color: #121215;
+  color: #c4c4cc;
+  font-size: 16px;
+}
+.menu {
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 100px;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu img {
+  width: 229px;
+}
+.menu .mobile {
+  display: none;
+}
+.menu nav ul,
+li,
+a {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+  text-decoration: none;
+  color: #c4c4cc;
+}
+.menu nav ul li a {
+  padding: 14px 16px;
+}
+.menu nav ul li a:hover {
+  background: #ffffff0d;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+.menu .actions {
+  display: flex;
+  gap: 18px;
+}
+.menu .actions button {
+  font-weight: 700;
+  color: #c4c4cc;
+  padding: 14px 16px;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  border: #005b41 solid 1px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+.menu .actions .btn {
+  border: none;
+  background: transparent;
+}
+.menu .actions .btn:hover {
+  background: #ffffff0d;
+}
+.menu .actions button:hover {
+  background: #005b41;
+  cursor: pointer;
+}
+.pikaw {
+  background: linear-gradient(90deg, #005b41, #008170, #03c988);
+  padding: 20px;
+  text-align: center;
+}
+section {
+  background: var(--bg-image) no-repeat right/ cover fixed;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .menu {
+    padding: 12px 20px;
+  }
+  .menu nav ul,
+  li,
+  a {
+    display: none;
+  }
+  .menu .actions .btn {
+    display: none;
+  }
+  .menu img {
+    display: none;
+  }
+  .menu .mobile {
+    display: block;
+    width: 100px;
+  }
+}
